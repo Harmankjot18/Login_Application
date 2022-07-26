@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".SignupActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvName"
+            android:text="@string/entername"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:digits="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM ">
+
+        </TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etname"
+            android:hint="@string/entername"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp">
+
+        </EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvEmail"
+            android:text="@string/enterEmail"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp">
+
+        </TextView>
+       <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etEmail"
+           android:hint="@string/enterEmail"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp">
+
+    </EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPhone"
+            android:text="@string/phone_number"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/phone_number"
+            android:digits="1234567890">
+
+        </EditText>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPassword"
+            android:text="@string/enterpassword"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
+            >
+
+        </TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etPassword"
+            android:hint="@string/enterpassword"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp">
+
+        </EditText>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPassword1"
+            android:text="@string/enterpassword"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
+            >
+
+        </TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etPassword1"
+            android:hint="@string/enterpassword"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp">
+
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvGender"
+            android:text="@string/gender"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp">
+
+        </TextView>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/rgGender"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbHe"
+                android:text="@string/male"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginRight="30dp">
+
+            </RadioButton>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbShe"
+                android:text="@string/female"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginRight="30dp">
+
+            </RadioButton>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbOther"
+                android:text="@string/other"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginRight="40dp">
+
+            </RadioButton>
+        </RadioGroup>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/btnSignup"
+            android:text="@string/signup"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp">
+
+        </Button>
+    </LinearLayout>
+</ScrollView>

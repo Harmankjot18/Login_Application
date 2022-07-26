@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Login_Application</string>
+    <string name="login">LOGIN</string>
+    <string name="enteremail">Enter username</string>
+    <string name="enterpassword">Enter Password</string>
+    <string name="forgotpassword">Forgot Password</string>
+    <string name="signup">Signup</string>
+    <string name="please_enter_password">Enter Password</string>
+    <string name="please_enter_username">Enter username</string>
+    <string name="login_successfully">Login Successful</string>
+    <string name="entername">Enter your name</string>
+    <string name="enterEmail">Enter Email</string>
+    <string name="phone_number">Enter your phone number</string>
+    <string name="male">He</string>
+    <string name="female">She</string>
+    <string name="other">Other</string>
+    <string name="gender">How you want to be addresed ?</string>
+    <string name="registered_successfully">Registered successfully</string>
+</resources>
