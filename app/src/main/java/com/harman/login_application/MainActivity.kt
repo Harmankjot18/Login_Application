@@ -1,6 +1,7 @@
 package com.harman.login_application
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -38,7 +39,11 @@ class MainActivity : AppCompatActivity() {
         }
         btnLogin.setOnClickListener{
             System.out.println("Clicked")
-            var name = etUsername.text.toString()
+            var intent= Intent(this,Implicit_intent::class.java)
+            startActivity(intent)
+        }
+
+      /*     var name = etUsername.text.toString()
             var  password =etPassword.text.toString()
             System.out.println("name $name")
             if (name.isNullOrEmpty()){
@@ -55,7 +60,9 @@ class MainActivity : AppCompatActivity() {
                     var intent = Intent(this, SignupActivity::class.java)
                     startActivity(intent)
                 }
-            }
+            }*/
     }
 }
-}
+
+
+

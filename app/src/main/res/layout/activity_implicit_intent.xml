@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Implicit_intent">
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/dial"
+    android:id="@+id/btndial"
+    android:layout_marginTop="120dp">
+
+</Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnsms"
+        android:text="@string/sms"
+        android:layout_marginTop="30dp">
+
+    </Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnshare"
+        android:text="@string/share"
+        android:layout_marginTop="30dp">
+
+    </Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnrating"
+        android:text="@string/rating"
+        android:layout_marginTop="30dp">
+
+    </Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnemail"
+        android:text="@string/email"
+        android:layout_marginTop="30dp">
+
+    </Button>
+</LinearLayout>

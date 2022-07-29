@@ -17,4 +17,9 @@
     <string name="gender">How you want to be addresed ?</string>
     <string name="registered_successfully">Registered successfully</string>
     <string name="others">others</string>
+    <string name="dial">Dial</string>
+    <string name="sms">Sms</string>
+    <string name="share">Share</string>
+    <string name="rating">Rating</string>
+    <string name="email">Email</string>
 </resources>
