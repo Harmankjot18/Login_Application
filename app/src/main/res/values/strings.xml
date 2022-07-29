@@ -16,4 +16,5 @@
     <string name="other">Other</string>
     <string name="gender">How you want to be addresed ?</string>
     <string name="registered_successfully">Registered successfully</string>
+    <string name="others">others</string>
 </resources>

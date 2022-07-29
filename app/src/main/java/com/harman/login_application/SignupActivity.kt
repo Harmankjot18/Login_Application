@@ -2,6 +2,7 @@ package com.harman.login_application
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import androidx.core.widget.doOnTextChanged
 
@@ -22,6 +23,7 @@ class SignupActivity : AppCompatActivity() {
     lateinit var    rbHe : RadioButton
     lateinit var    rbOther :  RadioButton
     lateinit var btnSignup : Button
+    lateinit var etOthername : EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
@@ -41,6 +43,7 @@ class SignupActivity : AppCompatActivity() {
         rbHe=findViewById(R.id.rbHe)
         rbOther=findViewById(R.id.rbOther)
         btnSignup=findViewById(R.id.btnSignup)
+        etOthername=findViewById(R.id.etOthername)
 
         etPassword.doOnTextChanged{text, start, before, count ->
 
@@ -49,6 +52,17 @@ class SignupActivity : AppCompatActivity() {
             }
             else{
                 etPassword.error==null
+            }
+            rgGender.setOnCheckedChangeListener { radioGroup, id ->
+                when(id){
+                    R.id.rbOther->{
+                        Toast.makeText(this, resources.getString(R.string.others), Toast.LENGTH_LONG).show()
+                        etOthername.visibility = View.VISIBLE
+                    }
+                    else->{
+                        etOthername.visibility = View.INVISIBLE
+                    }
+                }
             }
 
            btnSignup.setOnClickListener{
