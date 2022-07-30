@@ -42,14 +42,14 @@ class Implicit_intent : AppCompatActivity() {
         btnrating.setOnClickListener{
             System.out.println("Clicked")
             val intent = Intent(Intent.ACTION_VIEW)
-            intent.data= Uri.parse("rating:"+"")
+            intent.data= Uri.parse("")
             startActivity(intent)
         }
         btnemail.setOnClickListener{
             System.out.println("Clicked")
             val intent = Intent(Intent.ACTION_SEND)
-            intent.data= Uri.parse("email:"+"kh69@gmail.com")
-            startActivity(intent)
+            intent.data= Uri.parse("mailto:"+"kh69@gmail.com")
+            startActivity(Intent.createChooser(intent,"Gmail"));
         }
     }
 }
