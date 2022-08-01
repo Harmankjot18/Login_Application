@@ -36,7 +36,8 @@ class Implicit_intent : AppCompatActivity() {
         btnshare.setOnClickListener{
             System.out.println("Clicked")
             val intent = Intent(Intent.ACTION_SEND)
-            intent.data= Uri.parse("text:"+"hlo")
+            intent.setType("text/plain")
+            intent.putExtra(Intent.EXTRA_TEXT,"hi")
             startActivity(intent)
         }
         btnrating.setOnClickListener{
