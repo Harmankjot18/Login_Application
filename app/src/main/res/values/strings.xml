@@ -22,4 +22,7 @@
     <string name="share">Share</string>
     <string name="rating">Rating</string>
     <string name="email">Email</string>
+    <string name="enter_details">Enter Details</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
 </resources>

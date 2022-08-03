@@ -1,5 +1,6 @@
 package com.harman.login_application
 
+import android.app.Dialog
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -10,7 +11,9 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.core.widget.doOnTextChanged
+import com.harman.login_application.databinding.CustomDialogBinding
 import java.net.PasswordAuthentication
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +23,11 @@ class MainActivity : AppCompatActivity() {
     lateinit var tvForgotPassword :TextView
     lateinit var btnLogin : Button
     lateinit var tvsignup :TextView
+    lateinit var alertDialog :AlertDialog
+    lateinit var tv :TextView
+    lateinit var et : EditText
+    lateinit var btnCancel :Button
+    lateinit var btnOk : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -37,32 +45,68 @@ class MainActivity : AppCompatActivity() {
                 etPassword.error=null
             }
         }
-        btnLogin.setOnClickListener{
-            System.out.println("Clicked")
-            var intent= Intent(this,Implicit_intent::class.java)
-            startActivity(intent)
+       /* btnLogin.setOnClickListener{
+            var alertDialog = AlertDialog.Builder(this)
+                alertDialog.setTitle("login Successful")
+                alertDialog.setMessage("login !!")
+                alertDialog.setPositiveButton("ok"){_,_->
+                }
+                alertDialog.setNegativeButton("ok"){_,_->
+                }
+                alertDialog.setNeutralButton("ok"){_,_->
+                }
+                alertDialog.show()
+            }
+            */
+        etUsername.setOnClickListener{
+            var dialogBinding = CustomDialogBinding.inflate(layoutInflater)
+            var dialog = Dialog(this)
+           dialog.setContentView(dialogBinding.root)
+            dialogBinding.et.setText(tv.text.toString())
+            btnOk.setOnClickListener {
+                if (et.text.toString().isNullOrEmpty()) {
+                    Toast.makeText(this, "enter name", Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
+                tv.setText(dialogBinding.et.text.toString())
+                dialog.dismiss()
+            }
+            dialog.show()
         }
 
-      /*     var name = etUsername.text.toString()
-            var  password =etPassword.text.toString()
+
+        btnLogin.setOnClickListener {
+            /*  System.out.println("Clicked")
+            var intent= Intent(this,Implicit_intent::class.java)
+            startActivity(intent)
+        }*/
+
+            var name = etUsername.text.toString()
+            var password = etPassword.text.toString()
             System.out.println("name $name")
-            if (name.isNullOrEmpty()){
-                etUsername.error=resources.getString(R.string.please_enter_username)
+            if (name.isNullOrEmpty()) {
+                etUsername.error = resources.getString(R.string.please_enter_username)
                 etUsername.requestFocus()
-            }
-            else if(password.isNullOrEmpty()){
-                etPassword.error=resources.getString(R.string.please_enter_password)
+            } else if (password.isNullOrEmpty()) {
+                etPassword.error = resources.getString(R.string.please_enter_password)
                 etPassword.requestFocus()
-        }
-            else{
-                Toast.makeText(this,resources.getString(R.string.login_successfully),Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(
+                    this,
+                    resources.getString(R.string.login_successfully),
+                    Toast.LENGTH_LONG
+                ).show()
                 tvsignup.setOnClickListener {
                     var intent = Intent(this, SignupActivity::class.java)
                     startActivity(intent)
                 }
-            }*/
+            }
+        }
     }
 }
+
+
+
 
 
 
