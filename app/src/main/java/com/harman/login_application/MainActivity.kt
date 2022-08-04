@@ -62,14 +62,14 @@ class MainActivity : AppCompatActivity() {
             var dialogBinding = CustomDialogBinding.inflate(layoutInflater)
             var dialog = Dialog(this)
            dialog.setContentView(dialogBinding.root)
-            dialogBinding.et.setText(tv.text.toString())
-            btnOk.setOnClickListener {
+            dialogBinding.et.setText(etUsername.text.toString())
+            dialogBinding.btnOk.setOnClickListener {
                 if (et.text.toString().isNullOrEmpty()) {
                     Toast.makeText(this, "enter name", Toast.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }
-                tv.setText(dialogBinding.et.text.toString())
-                dialog.dismiss()
+                etUsername.setText(dialogBinding.et.text.toString())
+            dialog.dismiss()
             }
             dialog.show()
         }
